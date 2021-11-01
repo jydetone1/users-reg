@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+ }
+
+.form__app{
+    padding: 2rem 0;
+}
+.logo__header .logo__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .signup__text{
+        text-transform: capitalize;
+        color:#5B5B5B;
+        margin-top: 1.5rem;
+        font-weight: bold;
+        font-size: 24px;
+        font-style: normal;
+    }
+}
