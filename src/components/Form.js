@@ -19,14 +19,14 @@ const Form =() => {
         resolver: yupResolver(schema),
       });
     
-    const [visible, setVisibilty] = useState(false)
+    const [visible, setVisibility] = useState(false)
     const[shown, setShown] = useState(false)
 
-    const passwordVisitbilty  = (e) => {
-        setVisibilty(!visible)
+    const passwordVisibility  = () => {
+        setVisibility(!visible)
     }
 
-    const passwordShown = (e) => {
+    const passwordShown = () => {
         setShown(!shown)
     }
     
@@ -66,7 +66,7 @@ const Form =() => {
                            {...register('password')} 
                            autoComplete="off"
                         />
-                        <span onClick={passwordVisitbilty } className="eye__right"><Eye/></span>
+                        <span onClick={passwordVisibility } className="eye__right"><Eye/></span>
                         <p className="text-danger pt-1">{errors.password?.message}</p>
                     </div>
 
