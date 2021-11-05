@@ -26,14 +26,9 @@ const Form = () => {
   });
 
   const [visible, setVisibility] = useState(false);
-  const [shown, setShown] = useState(false);
 
   const passwordVisibility = () => {
     setVisibility(!visible);
-  };
-
-  const passwordShown = () => {
-    setShown(!shown);
   };
 
   const submitForm = (data) => {
@@ -93,7 +88,7 @@ const Form = () => {
                 confirm Password
               </label>
               <input
-                type={shown ? 'text' : 'password'}
+                type='password'
                 name='confirmPassword'
                 className='form-control p-3 rounded-box'
                 id='confirmPassword'
@@ -101,9 +96,6 @@ const Form = () => {
                 {...register('confirmPassword')}
                 autoComplete='off'
               />
-              <span onClick={passwordShown} className='eye__right'>
-                <Eye />
-              </span>
               <p className='text-danger pt-1'>
                 {' '}
                 {errors.confirmPassword && 'Passwords Should Match!'}
